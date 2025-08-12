@@ -258,23 +258,6 @@ npm install
 
 ---
 
-## 🤝 コントリビューション
-
-### 開発に参加するには
-
-1. **フォーク** このリポジトリをフォーク
-2. **ブランチ作成** `git checkout -b feature/amazing-feature`
-3. **コミット** `git commit -m 'Add some amazing feature'`
-4. **プッシュ** `git push origin feature/amazing-feature`
-5. **プルリクエスト** Pull Requestを作成
-
-### コード規約
-- **PHP**: PSR-12 準拠
-- **JavaScript**: Prettier + ESLint
-- **コミット**: [Conventional Commits](https://www.conventionalcommits.org/) 形式推奨
-
----
-
 <div align="center">
 
 **🚀 Happy Coding with Docker & Laravel! 🐳**
