@@ -5,7 +5,7 @@
 [![PHP](https://img.shields.io/badge/PHP-8.2-purple?logo=php)](https://www.php.net/)
 [![Nginx](https://img.shields.io/badge/Nginx-Latest-green?logo=nginx)](https://nginx.org/)
 
-DockerとNginx + PHP-FPM構成を使用したLaravel学習・練習プロジェクトです。
+DockerとNginx + PHP-FPM構成を使用した学習・練習プロジェクトです。
 チーム開発に適した環境構築とドキュメント整備を重視した構成になっています。
 
 ---
