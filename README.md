@@ -276,42 +276,10 @@ npm install
 
 ---
 
-## 📄 ライセンス
-
-このプロジェクトは [MIT License](https://opensource.org/licenses/MIT) の下で公開されています。
-
----
-
-## 🙏 謝辞
-
-- **Laravel Team** - 素晴らしいフレームワークの提供
-- **Docker Community** - コンテナ技術の普及
-- **Open Source Community** - 数多くのツールとライブラリ
-
----
-
-## 📞 サポート・質問
-
-- **Issues**: [GitHub Issues](https://github.com/tojiinoue-pasona/Docker-Practice/issues) で質問・バグ報告
-- **Discussions**: プロジェクトに関する議論
-- **Email**: 緊急時のお問い合わせ
-
----
-
-## 📈 今後の予定
-
-- [ ] **CI/CD パイプライン** 実装 (GitHub Actions)
-- [ ] **API機能** 追加 (RESTful API)
-- [ ] **テストカバレッジ** 向上
-- [ ] **Docker最適化** (マルチステージビルド改善)
-- [ ] **プロダクション環境** 対応ガイド
-
----
-
 <div align="center">
 
 **🚀 Happy Coding with Docker & Laravel! 🐳**
 
-Made with ❤️ by [tojiinoue-pasona](https://github.com/tojiinoue-pasona)
+Made with by [tojiinoue-pasona](https://github.com/tojiinoue-pasona)
 
 </div>
