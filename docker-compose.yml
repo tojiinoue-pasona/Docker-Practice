@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # PHP-FPMサービス（バックエンド処理担当）
+  php:
+    # docker/php/Dockerfile を使用してビルド
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    
+    # コンテナ名を明示的に指定（デバッグ時に便利）
+    container_name: laravel-php-fpm
+    
+    # ボリューム設定：ホストとコンテナ間でファイル共有
+    # 重要：Nginxコンテナと同じファイルを共有する必要がある
+    volumes:
+      - ./src:/var/www/html
+    
+    # 内部ネットワーク用（Nginxからのアクセスのみ）
+    # ポート公開なし（外部から直接アクセス不可）
+    expose:
+      - "9000"
+    
+    # 依存関係：このサービスの起動順序は特に指定しない
+    # PHP-FPMは独立して動作可能
+
+  # Nginxサービス（Webサーバー担当）
+  nginx:
+    # docker/nginx/Dockerfile を使用してビルド
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    
+    # コンテナ名を明示的に指定
+    container_name: laravel-nginx
+    
+    # ポート公開：外部からのアクセスポイント
+    # ホストの8000番 → コンテナの80番
+    ports:
+      - "8000:80"
+    
+    # ボリューム設定：PHPコンテナと同じファイルを共有
+    # 重要：static files (CSS/JS/images) を直接配信するため
+    volumes:
+      - ./src:/var/www/html
+    
+    # 依存関係：PHP-FPMサービスが起動してから起動
+    # なぜ？→ fastcgi_pass php:9000 でPHPサービスに依存
+    depends_on:
+      - php
+    
+    # ネットワークリンク：phpサービスと通信可能にする
+    # これにより nginx.conf の 'fastcgi_pass php:9000' が機能
+    links:
+      - php
