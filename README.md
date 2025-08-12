@@ -6,7 +6,6 @@
 [![Nginx](https://img.shields.io/badge/Nginx-Latest-green?logo=nginx)](https://nginx.org/)
 
 DockerとNginx + PHP-FPM構成を使用した学習・練習プロジェクトです。
-チーム開発に適した環境構築とドキュメント整備を重視した構成になっています。
 
 ---
 
